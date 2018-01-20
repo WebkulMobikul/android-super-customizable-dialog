@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MobikulDialogs</string>
+    <string name="custom_dialog_normal">Custom Dialog - Normal</string>
+    <string name="instant_success_dialog">Instant Success Dialog</string>
+    <string name="instant_error_dialog">Instant Error Dialog</string>
+    <string name="instant_warning_dialog">Instant Warning Dialog</string>
+    <string name="simple_progress_dialog">Simple Progress Dialog</string>
+    <string name="colored_progress_dialog_default">Colored Progress Dialog - Default</string>
+    <string name="colored_progress_dialog_customized">Colored Progress Dialog - Customized</string>
+    <string name="instant_colored_progress_dialog">Instant Colored Progress Dialog</string>
+    <string name="more_views">More Views Can be added to the dialog</string>
+</resources>
