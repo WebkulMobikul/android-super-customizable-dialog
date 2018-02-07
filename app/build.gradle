@@ -7,12 +7,11 @@ android {
     compileSdkVersion 26
     buildToolsVersion "27.0.0"
     defaultConfig {
-        applicationId "com.webkul.mobikul.mobikulcustomizabledialogs"
+        applicationId "com.webkul.mobikul.mobikuldialogs"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -30,5 +29,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile project(path: ':mobikuldialoglibrary-release')
+    compile project(path: ':mobikuldialoglibrary')
 }

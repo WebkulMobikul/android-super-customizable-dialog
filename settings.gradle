@@ -1,1 +1,1 @@
-include ':app', ':mobikuldialoglibrary-release'
+include ':app', ':mobikuldialoglibrary'
