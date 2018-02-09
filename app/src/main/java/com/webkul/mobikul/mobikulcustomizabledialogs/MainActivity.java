@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.webkul.mobikul.mobikuldialoglibrary.ColoredSimpleProgressDialog;
 import com.webkul.mobikul.mobikuldialoglibrary.CustomDialog;
 import com.webkul.mobikul.mobikuldialoglibrary.SimpleProgressDialog;
+import com.webkul.mobikul.mobikuldialogs.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         myCustomDialog.setPositiveButtonText("+ve ButtonText");
         myCustomDialog.setNegativeButtonText("-ve Button Text");
         myCustomDialog.setButtonTextColor(Color.WHITE);
-//        myCustomDialog.getIconview().setImageResource(R.drawable.ic_vector_custom_dialog_error_icon);
-//        myCustomDialog.setIconFromUrl("https://avatars2.githubusercontent.com/u/519857");
         myCustomDialog.setPositiveButtonClickListener(new CustomDialog.CustomDialogButtonClickListener() {
             @Override
             public void onClick(CustomDialog customDialog) {
@@ -48,60 +47,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        TextView mTextView = new TextView(myCustomDialog.getContext());
-//        mTextView.setTextColor(Color.parseColor("#de1ece"));
-//        mTextView.setText("This library can fetch icon from Url also \n E.g:- Webkul Logo in this dialog ");
-//        myCustomDialog.addMoreViews(mTextView);
-
 
         TextView textView = new TextView(myCustomDialog.getContext());
         textView.setText(R.string.more_views);
         textView.setTextSize(20);
         textView.setTextColor(Color.parseColor("#fcdf02"));
         myCustomDialog.addMoreViews(textView);
-
-//        TextView textView1 = new TextView(myCustomDialog.getContext());
-//        textView1.setText("textView1");
-//        textView1.setTextSize(20);
-//        textView1.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView1);
-//
-//        TextView textView2 = new TextView(myCustomDialog.getContext());
-//        textView2.setText("textView2");
-//        textView2.setTextSize(20);
-//        textView2.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView2);
-//
-//        TextView textView3 = new TextView(myCustomDialog.getContext());
-//        textView3.setText("textView3");
-//        textView3.setTextSize(20);
-//        textView3.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView3);
-//
-//        TextView textView4 = new TextView(myCustomDialog.getContext());
-//        textView4.setText("textView4");
-//        textView4.setTextSize(20);
-//        textView4.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView4);
-//
-//        TextView textView5 = new TextView(myCustomDialog.getContext());
-//        textView5.setText("textView5");
-//        textView5.setTextSize(20);
-//        textView5.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView5);
-//
-//        TextView textView6 = new TextView(myCustomDialog.getContext());
-//        textView6.setText("textView6");
-//        textView6.setTextSize(20);
-//        textView6.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView6);
-//
-//        TextView textView7 = new TextView(myCustomDialog.getContext());
-//        textView7.setText("textView7");
-//        textView7.setTextSize(20);
-//        textView7.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView7);
-
         myCustomDialog.show();
     }
 
