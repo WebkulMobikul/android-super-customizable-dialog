@@ -5,7 +5,7 @@ android {
         enabled = true
     }
     compileSdkVersion 26
-    buildToolsVersion "27.0.0"
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.webkul.mobikul.mobikuldialogs"
         minSdkVersion 15
@@ -26,8 +26,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.webkul.mobikul:super-customizable-dialogs:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile project(path: ':mobikuldialoglibrary')
 }
