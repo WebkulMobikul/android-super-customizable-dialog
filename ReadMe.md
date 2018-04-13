@@ -14,7 +14,7 @@ This library helps you create dialogs and change their visuals as per your need 
 Add this line in your `module level build.gradle` file
 
 ```
-  compile ''
+  compile 'com.webkul.mobikul:super-customizable-dialogs:1.0.1'
 ```
 
 :exclamation:  `Make Sure Databinding is set to true in your project`

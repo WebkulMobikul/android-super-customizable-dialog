@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/main_container"
     tools:context=".MainActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
         android:layout_gravity="center"
+        android:layout_margin="4dp"
         android:onClick="onClickCustomDialog"
         android:padding="12dp"
         android:text="@string/custom_dialog_normal" />
@@ -20,87 +19,56 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="4dp"
         android:onClick="showSuccessInstantDialog"
-        android:layout_gravity="center"
         android:padding="12dp"
         android:text="@string/instant_success_dialog" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="4dp"
         android:onClick="showErrorInstantDialog"
-        android:layout_gravity="center"
         android:padding="12dp"
         android:text="@string/instant_error_dialog" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="4dp"
         android:onClick="showWarningInstantDialog"
-        android:layout_gravity="center"
         android:padding="12dp"
         android:text="@string/instant_warning_dialog" />
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:onClick="onClickSimpleProgressDialog"
         android:layout_gravity="center"
-        android:padding="12dp"
-        android:text="@string/simple_progress_dialog" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:onClick="onClickDefaultProgressDialog"
-        android:layout_gravity="center"
         android:padding="12dp"
         android:text="@string/colored_progress_dialog_default" />
 
-
-
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="4dp"
         android:onClick="onClickColoredSimpleProgressDialog"
-        android:layout_gravity="center"
         android:padding="12dp"
         android:text="@string/colored_progress_dialog_customized" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="4dp"
         android:onClick="onClickInstantProgressDialog"
-        android:layout_gravity="center"
         android:padding="12dp"
         android:text="@string/instant_colored_progress_dialog" />
-
-    <!--<Button-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text=" default android progress bar"-->
-    <!--android:padding="4dp"-->
-    <!--android:onClick="onclickDefaultAndroidProgressBar"/>-->
-
-
-    <!--<Button-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:text="Custom Dialog"-->
-    <!--android:layout_height="wrap_content" />-->
-
-    <!--<Button-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:text="Custom Dialog"-->
-    <!--android:layout_height="wrap_content" />-->
 
 </LinearLayout>
 

@@ -1,14 +1,15 @@
 package com.webkul.mobikul.mobikuldialogs;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.webkul.mobikul.mobikuldialoglibrary.ColoredSimpleProgressDialog;
 import com.webkul.mobikul.mobikuldialoglibrary.CustomDialog;
-import com.webkul.mobikul.mobikuldialoglibrary.SimpleProgressDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,12 +25,13 @@ public class MainActivity extends AppCompatActivity {
         myCustomDialog.setSubTitle("This is A Normal Dialog Sample \nTitle text Size - 25 \nSubtitle Text size -16 \nYou can configure  upto two buttons as per your use case. \nThis dialog can not be cancelled without clicking buttons ");
         myCustomDialog.setTitleTextSize(25);
         myCustomDialog.setSubTitleTextSize(16);
-        myCustomDialog.setButtonEnabled(true);
+        myCustomDialog.setPositiveButtonEnabled(true);
         myCustomDialog.setNegativeButtonEnabled(true);
         myCustomDialog.setDismissOnBackPress(false);
-        myCustomDialog.setCanceledOnTouchOutside(false);
         myCustomDialog.setPositiveButtonText("+ve ButtonText");
         myCustomDialog.setNegativeButtonText("-ve Button Text");
+        myCustomDialog.setButtonsOrientation(LinearLayout.VERTICAL);
+        myCustomDialog.setButtonsGravity(Gravity.CENTER);
         myCustomDialog.setButtonTextColor(Color.WHITE);
         myCustomDialog.setPositiveButtonClickListener(new CustomDialog.CustomDialogButtonClickListener() {
             @Override
@@ -45,12 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 CustomDialog.getInstantDialog(myCustomDialog.getContext(), CustomDialog.Type.WARNING_TYPE_DIALOG).setTitleHeading("You clicked -ve Button").setSubTitle("").show();
             }
         });
-
-//        TextView mTextView = new TextView(myCustomDialog.getContext());
-//        mTextView.setTextColor(Color.parseColor("#de1ece"));
-//        mTextView.setText("This library can fetch icon from Url also \n E.g:- Webkul Logo in this dialog ");
-//        myCustomDialog.addMoreViews(mTextView);
-
+        myCustomDialog.setCanceledOnTouchOutside(false);
 
         TextView textView = new TextView(myCustomDialog.getContext());
         textView.setText(R.string.more_views);
@@ -58,54 +55,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setTextColor(Color.parseColor("#fcdf02"));
         myCustomDialog.addMoreViews(textView);
 
-//        TextView textView1 = new TextView(myCustomDialog.getContext());
-//        textView1.setText("textView1");
-//        textView1.setTextSize(20);
-//        textView1.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView1);
-//
-//        TextView textView2 = new TextView(myCustomDialog.getContext());
-//        textView2.setText("textView2");
-//        textView2.setTextSize(20);
-//        textView2.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView2);
-//
-//        TextView textView3 = new TextView(myCustomDialog.getContext());
-//        textView3.setText("textView3");
-//        textView3.setTextSize(20);
-//        textView3.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView3);
-//
-//        TextView textView4 = new TextView(myCustomDialog.getContext());
-//        textView4.setText("textView4");
-//        textView4.setTextSize(20);
-//        textView4.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView4);
-//
-//        TextView textView5 = new TextView(myCustomDialog.getContext());
-//        textView5.setText("textView5");
-//        textView5.setTextSize(20);
-//        textView5.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView5);
-//
-//        TextView textView6 = new TextView(myCustomDialog.getContext());
-//        textView6.setText("textView6");
-//        textView6.setTextSize(20);
-//        textView6.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView6);
-//
-//        TextView textView7 = new TextView(myCustomDialog.getContext());
-//        textView7.setText("textView7");
-//        textView7.setTextSize(20);
-//        textView7.setTextColor(Color.parseColor("#fcdf02"));
-//        myCustomDialog.addMoreViews(textView7);
-
         myCustomDialog.show();
-    }
-
-    public void onClickSimpleProgressDialog(View view) {
-        SimpleProgressDialog dialog = SimpleProgressDialog.show(this, getString(R.string.error), getString(R.string.error_occured_please_try_again));
-        dialog.setCancelable(true);
     }
 
     public void onClickDefaultProgressDialog(View view){
@@ -138,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         coloredSimpleProgressDialog.setText("Add Content here");
         coloredSimpleProgressDialog.getContentView().setTextColor(getResources().getColor(android.R.color.white));
         coloredSimpleProgressDialog.setCancelable(true);
+        coloredSimpleProgressDialog.showTitle(false);
         coloredSimpleProgressDialog.show();
     }
 
@@ -145,4 +96,5 @@ public class MainActivity extends AppCompatActivity {
         ColoredSimpleProgressDialog.getIntstantProgressDialog(view.getContext()).show();
 
     }
+
 }
